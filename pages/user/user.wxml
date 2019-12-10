@@ -1,0 +1,31 @@
+<view class="" >
+  <view class="v1">
+   <view class="v4">
+    <van-row>
+      <van-col span="6" offset="2"><van-image
+      round
+      width="8rem"
+      height="8rem"
+      src="../../img/1.png"
+      /></van-col>
+      <van-col span="8" offset="4">
+      <text>\n</text>
+      <text>\n</text>
+      <van-row offset="2">hlyj</van-row>
+      <text>\n</text>
+      <van-row offset="1">移动开发课</van-row>
+      </van-col>
+      </van-row>
+    </view>
+  </view>
+  <view class="v2">
+    <view class="v3">
+       <van-cell-group>
+         <van-cell title="更新人脸" icon="more-o" />
+         <van-cell title="管理考勤" icon="more-o" />
+         <van-cell title="分享" icon="more-o" />
+         <van-cell title="其他设置" icon="more-o" />
+       </van-cell-group>
+    </view>
+  </view>
+</view>

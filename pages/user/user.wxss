@@ -1,0 +1,21 @@
+/* pages/user/user.wxss */
+
+.v1{
+  height: 30vh;
+}
+
+.v2{
+  background-color: gainsboro;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.v3{
+  width: 90%;
+}
+
+.v4{
+  margin-bottom: 0px;
+}

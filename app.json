@@ -1,0 +1,40 @@
+{
+  "plugins": {
+    "calendar": {
+      "version": "1.1.0",
+      "provider": "wx92c68dae5a8bb046"
+    }
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/login/login",
+    "pages/message/message",
+    "pages/setting/setting",
+    "pages/note/note"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-icon": "/dist/icon/index",
+    "van-image": "/dist/image/index",
+    "van-row": "/dist/row/index",
+    "van-col": "/dist/col/index",
+    "van-nav-bar": "/dist/nav-bar/index",
+    "van-field": "/dist/field/index",
+    "van-cell": "/dist/cell/index",
+    "van-cell-group": "/dist/cell-group/index",
+    "van-picker": "/dist/picker/index",
+    "van-popup": "/dist/popup/index",
+    "van-button": "/dist/button/index",
+    "van-checkbox": "/dist/checkbox/index",
+    "van-checkbox-group": "/dist/checkbox-group/index"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

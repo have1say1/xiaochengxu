@@ -1,0 +1,37 @@
+<!--pages/message/message.wxml-->
+<view>
+<view>
+<van-nav-bar title="Message" safe-area-inset-top = "{{ false }}" left-text="返回" >
+  <van-icon name="plus" slot="right" />
+</van-nav-bar>
+</view>
+<view>
+<van-cell-group>
+  <van-cell title="NAME" label="MESSAGE ABSTRACT" >
+  <van-image
+  round
+  width="3rem"
+  height="3rem"
+  src="../../img/1.png"
+  />
+  </van-cell>
+  <van-cell title="NAME" label="MESSAGE ABSTRACT" >
+  <van-image
+  round
+  width="3rem"
+  height="3rem"
+  src="../../img/1.png"
+  />
+  </van-cell>
+  <van-cell title="NAME" label="MESSAGE ABSTRACT" >
+  <van-image
+  round
+  width="3rem"
+  height="3rem"
+  src="../../img/1.png"
+  />
+  </van-cell>
+</van-cell-group>
+</view>
+</view>
+
