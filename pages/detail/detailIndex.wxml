@@ -1,0 +1,57 @@
+<!--pages/detail/detailIndex.wxml-->
+<!-- <view class="nav-bar-view">
+  <van-nav-bar
+    left-arrow
+    fixed="true"
+    safe-area-inset-top="false"
+    bind:click-left="onTitleClickLeft">
+    <text slot="title">{{ navBarTitle }}</text>
+  </van-nav-bar>
+</view> -->
+<view class="title-image-parent">
+  <image class="title-image" mode="widthFix" src="{{titleImageSrc}}"></image>
+  <text class="title-name">Group Title</text> 
+  <text class="title-date">Date and Place</text>
+  <text class="title-sttime">ST.Time - End.Time</text>
+</view>
+
+<view class="detail-cell">
+  <van-grid 
+    clickable 
+    column-num="2"
+    gutter="20rpx">
+
+<!-- link-type="navigateTo"
+    url="/pages/dashboard/index" -->
+  <van-grid-item
+    icon="user-o"
+    text="Personal Note"
+  />
+    <van-grid-item
+      icon="calender-o"
+      text="KaoQin Statics"
+      link-type="navigateTo"
+      url="/pages/detail/kaoqinStatics"
+    />
+
+    <van-grid-item
+      icon="scan"
+      text="Invite Colleage"
+    />
+    <van-grid-item
+      icon="friends-o"
+      text="Group Info"
+    />
+    
+  </van-grid>
+</view>
+
+<view class="bottom-view">
+  <van-button class="button-facial" 
+    type="primary" 
+    round 
+    block 
+    size="large">FacialReco</van-button>
+    <van-button class="button-sign-in" type="default" >sign in</van-button>
+    <van-button class="button-sign-out" type="default">sign out</van-button>
+</view>

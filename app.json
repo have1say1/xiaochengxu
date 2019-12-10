@@ -8,10 +8,13 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/user/user",
-    "pages/login/login",
+    "pages/attendance/attendance",
     "pages/message/message",
     "pages/setting/setting",
+    "pages/detail/detailIndex",
+    "pages/detail/kaoqinStatics",
+    "pages/user/user",
+    "pages/login/login",
     "pages/note/note"
   ],
   "window": {
@@ -33,8 +36,42 @@
     "van-popup": "/dist/popup/index",
     "van-button": "/dist/button/index",
     "van-checkbox": "/dist/checkbox/index",
-    "van-checkbox-group": "/dist/checkbox-group/index"
+    "van-checkbox-group": "/dist/checkbox-group/index",
+    "van-tabbar": "/dist/tabbar/index",
+    "van-tabbar-item": "/dist/tabbar-item/index",
+    "van-search": "/dist/search/index",
+    "van-tab": "/dist/tab/index",
+    "van-tabs": "/dist/tabs/index",
+    "van-card": "/dist/card/index",
+    "van-grid": "/dist/grid/index",
+    "van-grid-item": "/dist/grid-item/index"
   },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "color": "#8a8a8a",
+    "list": [
+      {
+        "selectedIconPath": "img/icon/attendance-selected.png",
+        "iconPath": "img/icon/attendance-normal.png",
+        "pagePath": "pages/attendance/attendance",
+        "text": "考勤"
+      },
+      {
+        "selectedIconPath": "img/icon/msg-selected.png",
+        "iconPath": "img/icon/msg-normal.png",
+        "pagePath": "pages/message/message",
+        "text": "信息"
+      },
+      {
+        "selectedIconPath": "img/icon/my-selected.png",
+        "iconPath": "img/icon/my-normal.png",
+        "pagePath": "pages/setting/setting",
+        "text": "我的"
+      }
+    ]
+  },
+
+
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

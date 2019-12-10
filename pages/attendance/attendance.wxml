@@ -1,0 +1,31 @@
+<!--pages/attendance/attendance.wxml-->
+<view class="up-tabbar">
+  <van-search value="{{ searchValue }}" placeholder="请输入搜索关键词" />
+</view>
+<view class="main-body">
+
+<van-tabs active="{{ upTabActive }}" bind:change="onChangeUp">
+  <van-tab title="已参加">
+    <van-cell-group>
+      <van-cell 
+        size="large"
+        title="考勤名称" 
+        value="内容" 
+        label="考勤信息" 
+        icon="location-o"
+        is-link
+        link-type="navigateTo"
+        url="/pages/detail/detailIndex"
+        border/>
+        
+    </van-cell-group>
+  </van-tab>
+
+
+  <van-tab title="管理">
+    内容2
+  </van-tab>
+</van-tabs>
+
+</view>
+
