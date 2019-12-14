@@ -6,8 +6,23 @@ Page({
    */
   data: {
     navBarTitle: '活动名称',
-    titleImageSrc: ''
+    titleImageSrc: '',
+    qrCodeShow: false
   },
+
+  onQRCodeClickShow() {
+    this.setData({ qrCodeShow: true });
+    console.log('show')
+    
+  },
+
+  onQRCodeClickHide() {
+    this.setData({ qrCodeShow: false });
+    console.log('close')
+  },
+
+  noop() { }, 
+
 
   // 点击标题栏左上角返回
   onTitleClickLeft() {

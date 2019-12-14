@@ -1,8 +1,11 @@
 <!--pages/detail/kaoqinStatics.wxml-->
 <van-tabs active="{{ upTabActive }}" bind:change="onChangeUp">
   <van-tab title="Personal">
-    <image src="/img/src/detail-zhexian.png"></image>
-    <image src="/img/src/states.png"></image>
+    <view class="line-container">
+      <ec-canvas id="personal-dom-line" canvas-id="personal-line" ec="{{ personalLineEc }}"></ec-canvas>
+    </view>
+    <view class="bar-container">
+    </view>
   </van-tab>
 
 

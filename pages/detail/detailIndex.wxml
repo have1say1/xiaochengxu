@@ -37,6 +37,7 @@
     <van-grid-item
       icon="scan"
       text="Invite Colleage"
+      bind:click="onQRCodeClickShow"
     />
     <van-grid-item
       icon="friends-o"
@@ -45,6 +46,11 @@
     
   </van-grid>
 </view>
+  <van-overlay show="{{ show }}" bind:click="onQRCodeClickHide">
+    <view class="wrapper">
+      <view class="block" catch:tap="noop" />
+    </view>
+  </van-overlay>
 
 <view class="bottom-view">
   <van-button class="button-facial" 
@@ -52,6 +58,6 @@
     round 
     block 
     size="large">FacialReco</van-button>
-    <van-button class="button-sign-in" type="default" >sign in</van-button>
+    <van-button class="button-sign-in" type="default">sign in</van-button>
     <van-button class="button-sign-out" type="default">sign out</van-button>
 </view>
