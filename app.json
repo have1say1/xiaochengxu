@@ -44,7 +44,8 @@
     "van-tabs": "/dist/tabs/index",
     "van-card": "/dist/card/index",
     "van-grid": "/dist/grid/index",
-    "van-grid-item": "/dist/grid-item/index"
+    "van-grid-item": "/dist/grid-item/index",
+    "van-divider": "/dist/divider/index"
   },
   "tabBar": {
     "selectedColor": "#1296db",

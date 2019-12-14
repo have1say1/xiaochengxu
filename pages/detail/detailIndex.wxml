@@ -26,6 +26,7 @@
   <van-grid-item
     icon="user-o"
     text="Personal Note"
+    url="/pages/note/note"
   />
     <van-grid-item
       icon="calender-o"
