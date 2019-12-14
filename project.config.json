@@ -50,6 +50,20 @@
 					"id": -1,
 					"name": "Attendance",
 					"pathName": "pages/attendance/attendance",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "考勤状态",
+					"pathName": "pages/detail/kaoqinStatics",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "详情页",
+					"pathName": "pages/detail/detailIndex",
 					"scene": null
 				}
 			]
