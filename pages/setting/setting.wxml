@@ -43,7 +43,7 @@
   </van-cell-group>
   <text>\n</text>
   <view class = "s1">
-  <van-button round color="linear-gradient(to right, #4bb0ff, #6149f6)">提交</van-button>
+  <van-button bindtap="submit" round color="linear-gradient(to right, #4bb0ff, #6149f6)">提交</van-button>
   </view>
 </view>
 </view>
