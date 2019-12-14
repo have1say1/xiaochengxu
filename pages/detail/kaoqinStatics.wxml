@@ -1,13 +1,13 @@
 <!--pages/detail/kaoqinStatics.wxml-->
 <van-tabs active="{{ upTabActive }}" bind:change="onChangeUp">
   <van-tab title="Personal">
-    <image src="/images/detail-zhexian.png"></image>
-    <image src="/images/detail-states.png"></image>
+    <image src="/img/src/detail-zhexian.png"></image>
+    <image src="/img/src/states.png"></image>
   </van-tab>
 
 
   <van-tab title="Group">
-    <image src="/images/detail-zhexian.png"></image>
-    <image src="/images/detail-states.png"></image>
+    <image src="/img/src/detail-zhexian.png"></image>
+    <image src="/img/src/states.png"></image>
   </van-tab>
 </van-tabs>

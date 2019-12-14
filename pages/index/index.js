@@ -11,9 +11,11 @@ Page({
   },
   //事件处理函数
   bindViewTap: function() {
-    wx.navigateTo({
+    wx.switchTab({
       url: '../attendance/attendance'
-    })
+    }),
+    console.log("aaa")
+    
   },
 
   login:function(){
