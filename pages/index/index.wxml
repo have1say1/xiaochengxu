@@ -7,18 +7,6 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view>
-    <van-button bind:click="login" type="info">信息按钮</van-button>
-  </view>
-  <view>
-    <van-button bind:click="usert" type="info">信息按钮</van-button>
-  </view>
-  <view>
-    <van-button bind:click="set" type="info">信息按钮</van-button>
-  </view>
-  <view>
-    <van-button bind:click="note" type="info">信息按钮</van-button>
-  </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>

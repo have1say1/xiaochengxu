@@ -1,7 +1,7 @@
 <!--pages/message/message.wxml-->
 <view>
 <view>
-<van-nav-bar title="Message" safe-area-inset-top = "{{ false }}" left-text="返回" >
+<van-nav-bar title="Message" safe-area-inset-top = "{{ false }}" >
   <van-icon name="plus" slot="right" />
 </van-nav-bar>
 </view>

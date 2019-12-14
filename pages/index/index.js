@@ -15,31 +15,7 @@ Page({
       url: '../attendance/attendance'
     }),
     console.log("aaa")
-    
-  },
 
-  login:function(){
-    wx.navigateTo({
-      url: '../message/message'
-    })
-  },
-
-  note: function () {
-    wx.navigateTo({
-      url: '../note/note'
-    })
-  },
-
-  set: function () {
-    wx.navigateTo({
-      url: '../setting/setting'
-    })
-  },
-
-  usert:function(){
-    wx.navigateTo({
-      url: '../user/user'
-    })
   },
 
   onLoad: function () {
