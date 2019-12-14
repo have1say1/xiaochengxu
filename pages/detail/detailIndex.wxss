@@ -30,7 +30,12 @@
   font-size: 36rpx;
 }
 
+/* 底部三个按钮：登入 登出 识别 */
 .bottom-view {
+  margin-top: 100rpx;
+}
+
+/* .bottom-view {
   position: fixed;
   width: 80%;
   bottom: 50rpx;
@@ -45,7 +50,7 @@
   margin-top: 20rpx;
   float: right;
 
-}
+} */
 
 /* 二维码  */
 .wrapper {
