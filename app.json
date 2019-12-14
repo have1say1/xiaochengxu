@@ -65,7 +65,7 @@
       {
         "selectedIconPath": "img/icon/my-selected.png",
         "iconPath": "img/icon/my-normal.png",
-        "pagePath": "pages/setting/setting",
+        "pagePath": "pages/user/user",
         "text": "我的"
       }
     ]
