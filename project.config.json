@@ -79,6 +79,13 @@
 					"id": -1,
 					"name": "setting",
 					"pathName": "pages/setting/setting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "小组信息GroupInfo",
+					"pathName": "pages/detail/groupInfo",
 					"scene": null
 				}
 			]

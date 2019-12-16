@@ -1,0 +1,62 @@
+<!--pages/detail/groupInfo.wxml-->
+<!-- 顶部大图 -->
+<view class="top-image">
+  这里应该是个图
+  <image></image>
+</view>
+
+
+<!-- 显示成员列表 -->
+<view class="viewMemberList">
+  <van-cell value="内容" icon="shop-o" is-link>
+    <view slot="title">
+      <view class="member-list-text">Member List</view>
+      <view class="member-list-image" slot="memberIcon">
+          <van-image
+            class="member-list-image-item"
+            width="60"
+            height="60"
+            src="/img/headshot_2.png"
+          />
+          <van-image
+            class="member-list-image-item"
+            width="60"
+            height="60"
+            src="/img/headshot_3.png"
+          />
+          <van-image
+            class="member-list-image-item"
+            width="60"
+            height="60"
+            src="/img/headshot_4.png"
+          />
+          <van-image
+            class="member-list-image-item"
+            width="60"
+            height="60"
+            src="/img/headshot_6.png"
+          />
+          <van-icon 
+            class="member-list-image-item"
+            bind:click="addGroupMember"
+            name="add-o"
+            size="50"
+          />
+      </view>
+    </view>
+  </van-cell>
+</view>
+
+
+<view class="vanCellGroup">
+  <van-cell-group>
+    <van-cell title="Group Name" value="内容" is-link size="large"/>
+    <van-cell title="Time Space" value="18:00-23:00" is-link size="large"/>
+    <van-cell title="Location" value="软件与微电子学院" is-link size="large"/>
+  </van-cell-group>
+</view>
+<view class="vanCellGroup">
+  <van-cell-group class="vanCellGroup">
+    <van-cell title="Sign Rule" value="Weekly Monday" is-link size="large"/>
+  </van-cell-group>
+</view>

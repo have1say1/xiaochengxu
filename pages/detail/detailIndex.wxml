@@ -43,6 +43,8 @@
     <van-grid-item
       icon="friends-o"
       text="Group Info"
+      link-type="navigateTo"
+      url="/pages/detail/groupInfo"
     />
     
   </van-grid>

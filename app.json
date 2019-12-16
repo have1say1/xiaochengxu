@@ -13,6 +13,7 @@
     "pages/setting/setting",
     "pages/detail/detailIndex",
     "pages/detail/kaoqinStatics",
+    "pages/detail/groupInfo",
     "pages/user/user",
     "pages/login/login",
     "pages/note/note"
