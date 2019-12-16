@@ -15,7 +15,8 @@
     "pages/detail/kaoqinStatics",
     "pages/user/user",
     "pages/login/login",
-    "pages/note/note"
+    "pages/note/note",
+    "pages/camera/camera"
   ],
   "window": {
     "backgroundTextStyle": "light",

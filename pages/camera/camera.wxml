@@ -1,0 +1,3 @@
+<!--pages/camera/camera.wxml-->
+<van-nav-bar title="RECOGNIZATION" safe-area-inset-top = "{{ false }}" />
+<camera device-position="front" flash="off" binderror="error" style="width: 100%; height: 300px;"></camera>

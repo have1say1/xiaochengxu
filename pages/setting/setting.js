@@ -14,17 +14,17 @@ Page({
   },
   
   submit: function () {
-    // wx.request({
-    //   url: 'http://123.56.96.92:3000/api/v1/user/login', //仅为示例，并非真实的接口地址
-    //   data: "{phonenumnber: '12345678',password: '12345678'}",
-    //   header: {
-    //     'content-type': 'application/json' // 默认值
-    //   },
-    //   method:"POST",
-    //   success(res) {
-    //     console.log(res.data)
-    //   }
-    // })
+    wx.request({
+      url: 'http://123.56.96.92:3000/api/v1/user/login', //仅为示例，并非真实的接口地址
+      data: "{phonenumnber: '12345678',password: '12345678'}",
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method:"POST",
+      success(res) {
+        console.log(res.data)
+      }
+    })
   },
 
   showPopup() {

@@ -58,7 +58,7 @@
     type="primary" 
     round 
     block 
-    size="large">FacialReco</van-button>
+    size="large" bind:click="camera">FacialReco</van-button>
     <van-button class="button-sign-in" type="default">sign in</van-button>
     <van-button class="button-sign-out" type="default">sign out</van-button>
 </view>

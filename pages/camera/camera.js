@@ -1,38 +1,11 @@
-// pages/detail/detailIndex.js
+// pages/camera/camera.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    navBarTitle: '活动名称',
-    titleImageSrc: '',
-    qrCodeShow: false
-  },
 
-  camera:function(){
-    wx.navigateTo({
-      url: '../camera/camera'
-    })
-  },
-  
-  onQRCodeClickShow() {
-    this.setData({ qrCodeShow: true });
-    console.log('show')
-    
-  },
-
-  onQRCodeClickHide() {
-    this.setData({ qrCodeShow: false });
-    console.log('close')
-  },
-
-  noop() { }, 
-
-
-  // 点击标题栏左上角返回
-  onTitleClickLeft() {
-    wx.showToast({ title: '点击返回', icon: 'none' });
   },
 
   /**
