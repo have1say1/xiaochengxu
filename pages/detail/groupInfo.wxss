@@ -1,0 +1,23 @@
+/* pages/detail/groupInfo.wxss */
+
+/* 设置背景色 */
+page { background-color: gainsboro; }
+
+.top-image {
+  height: 300rpx;
+}
+
+.member-list-image {
+  margin-top: 20rpx;
+  margin-left: -40rpx;
+  display: flex;
+  flex-direction: row;
+}
+.member-list-image-item {
+  margin: 10rpx;
+}
+
+
+.vanCellGroup {
+  margin-top: 40rpx;
+}
