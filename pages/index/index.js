@@ -4,6 +4,8 @@ const app = getApp()
 
 Page({
   data: {
+    username:'',
+    password:'',
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -16,6 +18,36 @@ Page({
     }),
     console.log("aaa")
 
+  },
+
+  setz: function(e){
+    this.setData({
+      username: e.detail
+    })
+  },
+  
+
+  setp: function(e){
+    this.setData({
+      password: e.detail
+    })
+  },
+
+  login:function(){
+    wx.request({
+      url: 'http://123.56.96.92:3000/api/v1/user/login', //仅为示例，并非真实的接口地址
+      data: {
+        phonenumber: this.data.username,
+        password: this.data.password
+      },
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      method: "POST",
+      success(res) {
+        console.log(res.data)
+      }
+    })
   },
 
   onLoad: function () {
