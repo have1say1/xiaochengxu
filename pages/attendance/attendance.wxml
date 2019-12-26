@@ -17,39 +17,6 @@
         link-type="navigateTo"
         url="/pages/detail/detailIndex"
         border/>
-
-      <van-cell 
-        size="large"
-        title="考勤名称" 
-        value="内容" 
-        label="考勤信息" 
-        icon="location-o"
-        is-link
-        link-type="navigateTo"
-        url="/pages/detail/detailIndex"
-        border/>
-
-      <van-cell 
-        size="large"
-        title="考勤名称" 
-        value="内容" 
-        label="考勤信息" 
-        icon="location-o"
-        is-link
-        link-type="navigateTo"
-        url="/pages/detail/detailIndex"
-        border/>
-
-      <van-cell 
-        size="large"
-        title="考勤名称" 
-        value="内容" 
-        label="考勤信息" 
-        icon="location-o"
-        is-link
-        link-type="navigateTo"
-        url="/pages/detail/detailIndex"
-        border/>
         
     </van-cell-group>
     
