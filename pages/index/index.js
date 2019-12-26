@@ -46,13 +46,16 @@ Page({
       method: "POST",
       success(res) {
         console.log(res.data)
-        console.log(res.data.data.face)
         // 本地化
         wx.setStorageSync('userdataPhone', res.data.data.phonenumber)
         wx.setStorageSync('userdataUserName', res.data.data.username)
         wx.setStorageSync('userdataSex', res.data.data.sex)
         wx.setStorageSync('userdataOrganization', res.data.data.organization)
         wx.setStorageSync('userdataFace', res.data.data.face)
+        // 跳转
+        wx.switchTab({
+          url: '../attendance/attendance'
+        })
       }
     })
   },
