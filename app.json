@@ -9,6 +9,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/attendance/attendance",
+    "pages/attendance/add",
     "pages/message/message",
     "pages/setting/setting",
     "pages/detail/detailIndex",
@@ -48,7 +49,8 @@
     "van-grid": "/dist/grid/index",
     "van-grid-item": "/dist/grid-item/index",
     "van-divider": "/dist/divider/index",
-    "van-overlay": "/dist/overlay/index"
+    "van-overlay": "/dist/overlay/index",
+    "van-dialog": "/dist/dialog/index"
   },
   "tabBar": {
     "selectedColor": "#1296db",

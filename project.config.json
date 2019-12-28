@@ -93,6 +93,13 @@
 					"id": -1,
 					"name": "Index 注册登陆",
 					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Add 添加会议",
+					"pathName": "pages/attendance/add",
 					"scene": null
 				}
 			]

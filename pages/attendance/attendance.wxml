@@ -1,17 +1,19 @@
 <!--pages/attendance/attendance.wxml-->
 <view class="up-tabbar">
-  <van-search value="{{ searchValue }}" placeholder="请输入搜索关键词" />
+  <van-search value="{{ searchValue }}" placeholder="请输入搜索关键词" use-action-slot>
+    <view slot="action" bind:tap="addMeetingButton">添加</view>
+    </van-search>
 </view>
 <view class="main-body">
 
 <van-tabs active="{{ upTabActive }}" bind:change="onChangeUp">
   <van-tab title="已参加">
-    <van-cell-group>
+    <van-cell-group wx:for="{{attendanceListData}}" wx:for-item="attendanceListDataItem" >
       <van-cell 
         size="large"
-        title="考勤名称" 
+        title="{{attendanceListDataItem.name}}" 
         value="内容" 
-        label="考勤信息" 
+        label="{{attendanceListDataItem.msg}}" 
         icon="location-o"
         is-link
         link-type="navigateTo"
@@ -22,33 +24,22 @@
     
   </van-tab>
 
-
   <van-tab title="管理">
-    <van-cell-group>
-  
-      <van-cell 
-        size="large"
-        title="考勤名称" 
-        value="内容" 
-        label="考勤信息" 
-        icon="location-o"
-        is-link
-        link-type="navigateTo"
-        url="/pages/detail/detailIndex"
-        border/>
 
+    <van-cell-group wx:for="{{manageListData}}" wx:for-item="manageListDataItem" >
       <van-cell 
         size="large"
-        title="考勤名称" 
-        value="内容" 
-        label="考勤信息" 
+        title="{{manageListDataItem.mname}}" 
+        value="参加人数：{{manageListDataItem.sum}}" 
+        label="时间为：{{manageListDataItem.timespace.start}} ~ {{manageListDataItem.timespace.end}}" 
         icon="location-o"
         is-link
         link-type="navigateTo"
-        url="/pages/detail/detailIndex"
+        url="/pages/detail/detailIndex?mid={{manageListDataItem.mid}}"
         border/>
         
     </van-cell-group>
+
   </van-tab>
 </van-tabs>
 

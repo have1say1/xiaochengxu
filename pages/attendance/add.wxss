@@ -1,0 +1,12 @@
+/* pages/attendance/add.wxss */
+/* 设置背景色 */
+page { background-color: #EBEBEB; }
+
+/* 设置星期几的复选框 */
+.value-class {
+  flex: none !important;
+}
+
+.button {
+  padding-top: 40rpx
+}

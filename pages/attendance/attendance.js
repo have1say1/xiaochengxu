@@ -8,6 +8,8 @@ Page({
     upTabActive: 0,
     downTabbarActive: 0,
     currentData: 0,
+    attendanceListData: [],
+    manageListData:[] 
   },
 
 
@@ -16,6 +18,13 @@ Page({
     console.log(event.detail),
     console.log(event.detail.index),
     console.log(event.detail.title)
+  },
+
+  // 添加按钮
+  addMeetingButton() {
+    wx.navigateTo({
+      url: '../attendance/add'
+    })
   },
 
   // 下方tabBar的点击属性
@@ -34,7 +43,49 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var uid = wx.getStorageSync('userdataPhone')
+    // type：0 表示已参加
+    wx.request({
+      url: 'http://123.56.96.92:3000/api/v1/meeting/list',
+      data: {
+        uid: uid,
+        type: 0
+      },
+      method: "GET",
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      // 使用箭头函数
+      success: (res) => {
+        console.log(res.data.data),
+          console.log(res.data.data[0]),
+          this.setData({
+          attendanceListData: res.data.data
+          })
+        console.log(this.data.attendanceListData)
+      }
+    })
+    // type 1 表示管理
+    wx.request({
+      url: 'http://123.56.96.92:3000/api/v1/meeting/list',
+      data: {
+        uid : uid, 
+        type : 1
+      },
+      method: "GET",
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      // 使用箭头函数
+      success:(res)=>{
+        console.log(res.data.data),
+        console.log(res.data.data[0]),
+        this.setData({
+          manageListData: res.data.data
+        })
+        console.log(this.data.manageListData)
+      }
+    })
   },
 
   /**
