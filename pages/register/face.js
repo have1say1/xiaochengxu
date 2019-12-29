@@ -1,20 +1,38 @@
-// pages/user/user.js
+// pages/register/face.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userimg: wx.getStorageSync('userdataFace'),
-    username: wx.getStorageSync('userdataUserName'),
-    org: wx.getStorageSync('userdataOrganization')
+     face:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
+  },
+
+  caiji: function () {
+    this.data.cameraContext = wx.createCameraContext()
+    this.data.cameraContext.takePhoto({
+      quality: "high", //高质量的图片
+      success: res => {
+        //res.tempImagePath照片文件在手机内的的临时路径
+        let tempImagePath = res.tempImagePath
+        let base64 = "data:image/jpeg;base64,"+wx.getFileSystemManager().readFileSync(tempImagePath, 'base64')
+        wx.setStorageSync('face', base64)
+        wx.showToast({
+          title: '人脸采集成功',
+          duration: 3000
+        })
+        wx.navigateTo({
+          url: '/pages/register/register',
+        })
+      }
+    })
   },
 
   /**
@@ -24,19 +42,11 @@ Page({
 
   },
 
-  tuichu:function(){
-    wx.navigateTo({
-      url:"../index/index"
-    })
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({ userimg: wx.getStorageSync('userdataFace') });
-    this.setData({ username: wx.getStorageSync('userdataUserName') });
-    this.setData({ org: wx.getStorageSync('userdataOrganization') });
+
   },
 
   /**

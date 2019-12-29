@@ -18,7 +18,9 @@
     "pages/user/user",
     "pages/login/login",
     "pages/note/note",
-    "pages/camera/camera"
+    "pages/camera/camera",
+    "pages/register/register",
+    "pages/register/face"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -51,7 +53,9 @@
     "van-divider": "/dist/divider/index",
     "van-overlay": "/dist/overlay/index",
     "van-toast": "/dist/toast/index",
-    "van-dialog": "/dist/dialog/index"
+    "van-dialog": "/dist/dialog/index",
+    "van-radio": "/dist/radio/index",
+    "van-radio-group": "/dist/radio-group/index"
   },
   "tabBar": {
     "selectedColor": "#1296db",

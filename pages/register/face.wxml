@@ -1,0 +1,8 @@
+<!--pages/register/face.wxml-->
+<van-nav-bar title="人脸采集" safe-area-inset-top = "{{ false }}" />
+<view class = "s1">
+<camera device-position="front" flash="off" binderror="error" style="width: 90%; height: 300px;"></camera>
+<text>\n</text>
+<text>\n</text>
+<van-button bindtap="caiji" round color="linear-gradient(to right, #4bb0ff, #6149f6)">拍照</van-button>
+</view>
