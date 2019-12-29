@@ -50,11 +50,8 @@
     "van-grid-item": "/dist/grid-item/index",
     "van-divider": "/dist/divider/index",
     "van-overlay": "/dist/overlay/index",
-<<<<<<< HEAD
-    "van-toast": "/dist/toast/index"
-=======
+    "van-toast": "/dist/toast/index",
     "van-dialog": "/dist/dialog/index"
->>>>>>> master
   },
   "tabBar": {
     "selectedColor": "#1296db",
