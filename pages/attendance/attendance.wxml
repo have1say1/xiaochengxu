@@ -11,13 +11,13 @@
     <van-cell-group wx:for="{{attendanceListData}}" wx:for-item="attendanceListDataItem" >
       <van-cell 
         size="large"
-        title="{{attendanceListDataItem.name}}" 
-        value="内容" 
-        label="{{attendanceListDataItem.msg}}" 
+        title="{{attendanceListDataItem.mname}}" 
+        value="参加人数：{{attendanceListDataItem.sum}}" 
+        label="邀请码:{{attendanceListDataItem.mid}}" 
         icon="location-o"
         is-link
         link-type="navigateTo"
-        url="/pages/detail/detailIndex"
+        url="/pages/detail/detailIndex?mid={{attendanceListDataItem.mid}}"
         border/>
         
     </van-cell-group>
