@@ -63,6 +63,8 @@ Page({
   },
   onButtonSubmit: function(event) {
     // 网络请求
+    var str, num;
+    const usrid = wx.getStorageSync('userdataPhone');
     wx.request({
       url: 'http://123.56.96.92:3000/api/v1/meeting/add',
       data: {
@@ -74,7 +76,7 @@ Page({
         longitude: 116, 
         latitude: 39, 
         describe: '北京大学软件与微电子学院1号楼', 
-        uid: wx.getStorageSync('userdataPhone')
+        uid: usrid
       },
       method: "POST",
       header: {
@@ -83,6 +85,9 @@ Page({
       // 使用箭头函数
       success: (res) => {
         console.log(res.data.msg)
+        str = res.data.msg
+        num = str.replace(/[^0-9]/ig, "");
+        console.log(num)
         // 显示dialog
         Dialog.alert({
           message: '添加成功'
@@ -93,6 +98,7 @@ Page({
       }
       
     })
+
   },
   
   toggle(event) {
