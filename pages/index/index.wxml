@@ -20,7 +20,9 @@
     bind:input = "setp"
     />
     <view class = "s1">
-  <van-button bindtap="login" round color="linear-gradient(to right, #4bb0ff, #6149f6)">提交</van-button>
+  <van-button bindtap="login" round color="linear-gradient(to right, #4bb0ff, #6149f6)">登录</van-button>
+  <text>\n</text>
+  <van-button bindtap="regist" round color="linear-gradient(to right, #4bb0ff, #6149f6)">注册</van-button>
   </view>
     <!-- <text class="user-motto">{{motto}}</text> -->
   </view>

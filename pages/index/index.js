@@ -32,6 +32,12 @@ Page({
       password: e.detail
     })
   },
+  
+  regist:function(){
+     wx.navigateTo({
+       url: '/pages/register/register',
+     })
+  },
 
   login:function(){
     wx.request({
