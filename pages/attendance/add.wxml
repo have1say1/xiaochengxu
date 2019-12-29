@@ -1,0 +1,55 @@
+<!--pages/attendance/add.wxml-->
+<van-cell-group title="请输入会议信息">
+  <van-field
+    value="{{ mname }}"
+    clearable
+    label="会议名"
+    placeholder="请输入会议名"
+    bind:input='inputMname'
+  />
+
+  <van-field
+    value="{{ describe }}"
+    label="位置"
+    placeholder="请输入签到位置"
+    bind:input='inputDescribe'
+  />
+
+  <van-field
+    value="{{ stTime }}"
+    label="开始时间"
+    placeholder="请输入签到开始时间"
+    bind:input='inputStTime'
+  />
+
+  <van-field
+    value="{{ endTime }}"
+    label="结束时间"
+    placeholder="请输入签到结束时间"
+    bind:input='inputEndTime'
+  />
+  </van-cell-group>
+
+<van-checkbox-group value="{{ weekDayResult }}" bind:change="onWeekDayChange">
+  <van-cell-group title="选择每周签到时间">
+    <van-cell
+      wx:for="{{ weekDayList }}"
+      wx:key="index"
+      title="周{{ item }}"
+      value-class="value-class"
+      clickable
+      data-index="{{ index }}"
+      bind:click="toggle"
+    >
+      <van-checkbox catch:tap="noop" class="checkboxes-{{ index }}" name="{{ item }}" />
+    </van-cell>
+  </van-cell-group>
+</van-checkbox-group>
+
+<view class="button">
+  <van-button type="default" bind:click="onButtonCancel">取消</van-button>
+  <van-button type="primary" bind:click="onButtonSubmit">提交</van-button>
+</view>
+
+<!-- 弹窗 -->
+<van-dialog id="van-dialog" />

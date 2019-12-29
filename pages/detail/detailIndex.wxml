@@ -10,9 +10,9 @@
 </view> -->
 <view class="title-image-parent">
   <image class="title-image" mode="widthFix" src="{{titleImageSrc}}"></image>
-  <text class="title-name">Group Title</text> 
-  <text class="title-date">Date and Place</text>
-  <text class="title-sttime">ST.Time - End.Time</text>
+  <text class="title-name">{{groupTitle}}</text> 
+  <text class="title-date">Date and {{place}}</text>
+  <text class="title-sttime">{{stTime}} - {{endTime}}</text>
 </view>
 
 <view class="detail-cell">

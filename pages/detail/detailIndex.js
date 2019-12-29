@@ -6,8 +6,12 @@ Page({
    */
   data: {
     navBarTitle: '活动名称',
+    groupTitle: '',
+    place: '',
+    stTime: '',
+    endTime: '',
     titleImageSrc: '',
-    qrCodeShow: false
+    qrCodeShow: false,
   },
 
   camera:function(){
@@ -39,7 +43,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var mid = options.mid
+    wx.request({
+      url: 'http://123.56.96.92:3000/api/v1/meeting/detail',
+      data: {
+         meetingid: mid
+      },
+      method: "GET",
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      // 使用箭头函数
+      success: (res) => {
+        console.log(res.data.data)
+        this.setData({
+          groupTitle: res.data.data.mname, 
+          place: res.data.data.location.describe, 
+          stTime: res.data.data.checktime.timespace.start, 
+          endTime: res.data.data.checktime.timespace.end
+        })
+      }
+    })
+    
   },
 
   /**
