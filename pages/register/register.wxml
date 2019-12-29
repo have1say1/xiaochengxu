@@ -28,7 +28,7 @@
   />
   <van-field
     type="password"
-    label="密码"
+    label="确认密码"
   />
   <van-field
     value="{{ username }}"
