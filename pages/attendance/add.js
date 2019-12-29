@@ -1,6 +1,15 @@
 // pages/attendance/add.js
 import Dialog from '../../dist/dialog/dialog';
 
+const dataMap = {
+  '日': 0,
+  '一': 1,
+  '二': 2,
+  '三': 3,
+  '四': 4,
+  '五': 5,
+  '六': 6
+}
 
 Page({
   /**
@@ -13,6 +22,7 @@ Page({
     describe: '',
     stTime: '',
     endTime: '',
+    rule: []
   },
 
 
@@ -64,7 +74,7 @@ Page({
       data: {
         mname: this.data.mname,
         mcover: '一张图', 
-        check_rule: this.data.weekDayResult.join('_'), 
+        check_rule: this.data.rule, 
         check_time_start: this.data.stTime, 
         check_time_end: this.data.endTime, 
         longitude: 116, 
@@ -88,9 +98,15 @@ Page({
     const { index } = event.currentTarget.dataset;
     const checkbox = this.selectComponent(`.checkboxes-${index}`);
     checkbox.toggle();
-    var arr = this.data.weekDayResult.join('_');
-    console.log(arr);
     
+    var arr = this.data.weekDayResult.map(function(value, index, array) {
+      return this[value];
+    }, dataMap)
+    var result = arr.sort().join('_');
+    console.log(result);
+    this.setData({
+      rule: result
+    })
   },
 
   noop() { },

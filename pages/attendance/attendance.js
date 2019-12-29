@@ -43,6 +43,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.refresh();
+  },
+  onPullDownRefresh: function() {
+    this.refresh();
+  },
+
+  refresh() {
     var uid = wx.getStorageSync('userdataPhone')
     // type：0 表示已参加
     wx.request({
@@ -60,7 +67,7 @@ Page({
         console.log(res.data.data),
           console.log(res.data.data[0]),
           this.setData({
-          attendanceListData: res.data.data
+            attendanceListData: res.data.data
           })
         console.log(this.data.attendanceListData)
       }
@@ -69,20 +76,20 @@ Page({
     wx.request({
       url: 'http://123.56.96.92:3000/api/v1/meeting/list',
       data: {
-        uid : uid, 
-        type : 1
+        uid: uid,
+        type: 1
       },
       method: "GET",
       header: {
         'Content-Type': 'application/x-www-form-urlencoded' // 默认值
       },
       // 使用箭头函数
-      success:(res)=>{
+      success: (res) => {
         console.log(res.data.data),
-        console.log(res.data.data[0]),
-        this.setData({
-          manageListData: res.data.data
-        })
+          console.log(res.data.data[0]),
+          this.setData({
+            manageListData: res.data.data
+          })
         console.log(this.data.manageListData)
       }
     })
