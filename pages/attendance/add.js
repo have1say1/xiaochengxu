@@ -1,5 +1,6 @@
 // pages/attendance/add.js
 import Dialog from '../../dist/dialog/dialog';
+const util = require('../../utils/util.js');
 
 const dataMap = {
   '日': 0,
@@ -61,13 +62,6 @@ Page({
     wx.navigateBack()
   },
   onButtonSubmit: function(event) {
-    // 显示dialog
-    Dialog.alert({
-      message: '添加成功'
-    }).then(() => {
-      // on close
-      wx.navigateBack()
-    });
     // 网络请求
     wx.request({
       url: 'http://123.56.96.92:3000/api/v1/meeting/add',
@@ -75,8 +69,8 @@ Page({
         mname: this.data.mname,
         mcover: '一张图', 
         check_rule: this.data.rule, 
-        check_time_start: this.data.stTime, 
-        check_time_end: this.data.endTime, 
+        check_time_start: util.changeStrToMinutes(this.data.stTime),
+        check_time_end: util.changeStrToMinutes(this.data.endTime),
         longitude: 116, 
         latitude: 39, 
         describe: this.data.describe, 
@@ -89,8 +83,15 @@ Page({
       // 使用箭头函数
       success: (res) => {
         console.log(res.data.msg)
-        
+        // 显示dialog
+        Dialog.alert({
+          message: '添加成功'
+        }).then(() => {
+          // on close
+          wx.navigateBack()
+        });
       }
+      
     })
   },
   

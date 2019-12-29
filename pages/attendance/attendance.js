@@ -1,4 +1,5 @@
 // pages/attendance/attendance.js
+const util = require('../../utils/util.js');
 Page({
 
   /**
@@ -65,9 +66,8 @@ Page({
       // 使用箭头函数
       success: (res) => {
         console.log(res.data.data),
-          console.log(res.data.data[0]),
           this.setData({
-            attendanceListData: res.data.data
+            attendanceListData: res.data.data,
           })
         console.log(this.data.attendanceListData)
       }

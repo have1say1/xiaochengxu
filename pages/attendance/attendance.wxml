@@ -25,13 +25,15 @@
   </van-tab>
 
   <van-tab title="管理">
+<!-- 
+        label="时间为：{{manageListDataItem.timespace.start}} ~ {{manageListDataItem.timespace.end}}" -->
 
     <van-cell-group wx:for="{{manageListData}}" wx:for-item="manageListDataItem" >
       <van-cell 
         size="large"
         title="{{manageListDataItem.mname}}" 
         value="参加人数：{{manageListDataItem.sum}}" 
-        label="时间为：{{manageListDataItem.timespace.start}} ~ {{manageListDataItem.timespace.end}}" 
+        label="邀请码：{{manageListDataItem.mid}}"
         icon="location-o"
         is-link
         link-type="navigateTo"

@@ -1,4 +1,5 @@
 // pages/detail/detailIndex.js
+const util = require('../../utils/util.js');
 Page({
 
   /**
@@ -39,6 +40,7 @@ Page({
   onTitleClickLeft() {
     wx.showToast({ title: '点击返回', icon: 'none' });
   },
+  
 
   /**
    * 生命周期函数--监听页面加载
@@ -56,12 +58,13 @@ Page({
       },
       // 使用箭头函数
       success: (res) => {
-        console.log(res.data.data)
+        console.log(res.data.data);
+
         this.setData({
           groupTitle: res.data.data.mname, 
           place: res.data.data.location.describe, 
-          stTime: res.data.data.checktime.timespace.start, 
-          endTime: res.data.data.checktime.timespace.end,
+          stTime: util.changeHourMinutestr(res.data.data.checktime.timespace.start),
+          endTime: util.changeHourMinutestr(res.data.data.checktime.timespace.end),
           meetingId: mid
         })
       }
