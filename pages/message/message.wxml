@@ -1,13 +1,21 @@
 <!--pages/message/message.wxml-->
 <view>
 <view>
-<van-nav-bar title="Message" safe-area-inset-top = "{{ false }}" >
+<van-nav-bar title="信息" safe-area-inset-top = "{{ false }}" >
   <van-icon name="plus" slot="right" />
 </van-nav-bar>
 </view>
 <view>
 <van-cell-group>
-  <van-cell title="NAME" label="MESSAGE ABSTRACT" >
+  <van-cell title="黄乐一捷" label="恭喜您已经成功创建移动开发课程" >
+  <van-image
+  round
+  width="3rem"
+  height="3rem"
+  src="../../img/1.png"
+  />
+  </van-cell>
+  <!-- <van-cell title="NAME" label="MESSAGE ABSTRACT" >
   <van-image
   round
   width="3rem"
@@ -22,15 +30,7 @@
   height="3rem"
   src="../../img/1.png"
   />
-  </van-cell>
-  <van-cell title="NAME" label="MESSAGE ABSTRACT" >
-  <van-image
-  round
-  width="3rem"
-  height="3rem"
-  src="../../img/1.png"
-  />
-  </van-cell>
+  </van-cell> -->
 </van-cell-group>
 </view>
 </view>
