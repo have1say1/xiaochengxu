@@ -1,13 +1,21 @@
 <!--pages/note/note.wxml-->
 <van-nav-bar title="Personal Note" safe-area-inset-top = "{{ false }}" />
 <view class="n1">
-<calendar calendar-style="calendar" header-style="header" board-style="board" />
+<calendar calendar-style="calendar" header-style="header" board-style="board" days-color="{{demo5_days_style}}"/>
 </view>
 <van-divider borderColor="#1989fa" />
 <view>
-<van-cell title="DATE" label="NUM" class="n2"/>
+<van-cell title="12月29日" label="1" class="n2"/>
 <van-cell-group>
-  <van-cell title="NAME" label="MESSAGE ABSTRACT" >
+  <van-cell title="黄乐一捷" label="已经在12.29的移动开发课程签到" >
+  <van-image
+  round
+  width="3rem"
+  height="3rem"
+  src="../../img/1.png"
+  />
+  </van-cell>
+  <!-- <van-cell title="NAME" label="MESSAGE ABSTRACT" >
   <van-image
   round
   width="3rem"
@@ -22,14 +30,6 @@
   height="3rem"
   src="../../img/1.png"
   />
-  </van-cell>
-  <van-cell title="NAME" label="MESSAGE ABSTRACT" >
-  <van-image
-  round
-  width="3rem"
-  height="3rem"
-  src="../../img/1.png"
-  />
-  </van-cell>
+  </van-cell> -->
 </van-cell-group>
 </view>
