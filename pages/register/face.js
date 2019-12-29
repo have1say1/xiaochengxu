@@ -22,7 +22,7 @@ Page({
       success: res => {
         //res.tempImagePath照片文件在手机内的的临时路径
         let tempImagePath = res.tempImagePath
-        let base64 = wx.getFileSystemManager().readFileSync(tempImagePath, 'base64')
+        let base64 = "data:image/jpeg;base64,"+wx.getFileSystemManager().readFileSync(tempImagePath, 'base64')
         wx.setStorageSync('face', base64)
         wx.showToast({
           title: '人脸采集成功',

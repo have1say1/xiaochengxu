@@ -27,6 +27,10 @@
     bind:input = "setpwd"
   />
   <van-field
+    type="password"
+    label="密码"
+  />
+  <van-field
     value="{{ username }}"
     label="姓名"
     bind:input = "setu"
