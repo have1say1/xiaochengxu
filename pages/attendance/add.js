@@ -73,7 +73,7 @@ Page({
         check_time_end: util.changeStrToMinutes(this.data.endTime),
         longitude: 116, 
         latitude: 39, 
-        describe: this.data.describe, 
+        describe: '北京大学软件与微电子学院1号楼', 
         uid: wx.getStorageSync('userdataPhone')
       },
       method: "POST",

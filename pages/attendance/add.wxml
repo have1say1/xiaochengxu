@@ -8,12 +8,16 @@
     bind:input='inputMname'
   />
 
-  <van-field
+  <!-- <van-field
     value="{{ describe }}"
     label="位置"
     placeholder="请输入签到位置"
     bind:input='inputDescribe'
-  />
+  /> -->
+
+  <van-cell title="位置">
+    <van-icon slot="right-icon" name="location-o" class="custom-icon" />
+  </van-cell>
 
   <van-field
     value="{{ stTime }}"
