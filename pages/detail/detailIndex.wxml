@@ -51,7 +51,7 @@
 </view>
   <van-overlay show="{{ qrCodeShow }}" bind:click="onQRCodeClickHide">
     <view class="wrapper">
-      <view class="block" catch:tap="noop"> 这是二维码哈 </view>
+      <view class="block" catch:tap="noop"> 邀请码：{{ meetingId }} </view>
     </view>
   </van-overlay>
 

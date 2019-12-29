@@ -12,6 +12,7 @@ Page({
     endTime: '',
     titleImageSrc: '',
     qrCodeShow: false,
+    meetingId: ''
   },
 
   camera:function(){
@@ -60,7 +61,8 @@ Page({
           groupTitle: res.data.data.mname, 
           place: res.data.data.location.describe, 
           stTime: res.data.data.checktime.timespace.start, 
-          endTime: res.data.data.checktime.timespace.end
+          endTime: res.data.data.checktime.timespace.end,
+          meetingId: mid
         })
       }
     })
