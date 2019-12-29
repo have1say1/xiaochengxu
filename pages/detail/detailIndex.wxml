@@ -51,7 +51,7 @@
 </view>
   <van-overlay show="{{ qrCodeShow }}" bind:click="onQRCodeClickHide">
     <view class="wrapper">
-      <view class="block" catch:tap="noop"> 邀请码：{{ meetingId }} </view>
+      <image src="/img/src/erwei.PNG"></image>
     </view>
   </van-overlay>
 
