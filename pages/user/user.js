@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    userimg: wx.getStorageSync('userdataFace'),
+    username: wx.getStorageSync('userdataUserName'),
+    org: wx.getStorageSync('userdataOrganization')
   },
 
   /**
@@ -20,6 +22,12 @@ Page({
    */
   onReady: function () {
 
+  },
+
+  tuichu:function(){
+    wx.navigateTo({
+      url:"../index/index"
+    })
   },
 
   /**

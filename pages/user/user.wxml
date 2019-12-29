@@ -6,14 +6,14 @@
       round
       width="8rem"
       height="8rem"
-      src="../../img/1.png"
+      src="{{userimg}}"
       /></van-col>
       <van-col span="8" offset="4">
       <text>\n</text>
       <text>\n</text>
-      <van-row offset="2">hlyj</van-row>
+      <van-row offset="2">{{username}}</van-row>
       <text>\n</text>
-      <van-row offset="1">移动开发课</van-row>
+      <van-row offset="1">{{org}}</van-row>
       </van-col>
       </van-row>
     </view>
@@ -24,7 +24,7 @@
          <van-cell title="修改信息" icon="more-o" url="../setting/setting"/>
          <van-cell title="管理考勤" icon="more-o" />
          <van-cell title="分享" icon="more-o" />
-         <van-cell title="退出登录" icon="more-o" url="../index/index"/>
+         <van-cell title="退出登录" icon="more-o" bindtap = "tuichu"/>
        </van-cell-group>
     </view>
   </view>

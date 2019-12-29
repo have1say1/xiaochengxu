@@ -48,7 +48,8 @@
     "van-grid": "/dist/grid/index",
     "van-grid-item": "/dist/grid-item/index",
     "van-divider": "/dist/divider/index",
-    "van-overlay": "/dist/overlay/index"
+    "van-overlay": "/dist/overlay/index",
+    "van-toast": "/dist/toast/index"
   },
   "tabBar": {
     "selectedColor": "#1296db",
